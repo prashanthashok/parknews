@@ -1,0 +1,8 @@
+<div fxLayout="row">
+    <div class="news-list">
+        <park-news-list (newsSelected)="readMore($event)"></park-news-list>
+    </div>
+    <div class="news-detail">
+        <park-news-detail [newsItem]="newsItem"></park-news-detail>
+    </div>
+</div>

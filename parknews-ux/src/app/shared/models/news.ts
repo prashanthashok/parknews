@@ -1,4 +1,5 @@
 export class News {
+    id: number;
     source: {
         id: string,
         name: string

@@ -6,19 +6,25 @@ import { MaterialModule } from './material.module';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { NewsListComponent } from './news-list/news-list.component';
+import { NewsListComponent } from './news/news-list/news-list.component';
+import { NewsContainerComponent } from './news/news-container.component';
+import { NewsDetailComponent } from './news/news-detail/news-detail.component';
+import { FlexLayoutModule } from '@angular/flex-layout'
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    NewsListComponent
+    NewsListComponent,
+    NewsContainerComponent,
+    NewsDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

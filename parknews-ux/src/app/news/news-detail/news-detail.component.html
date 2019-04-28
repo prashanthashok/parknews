@@ -1,0 +1,22 @@
+<ng-container *ngIf="newsItem && newsItem.content else noContent" >
+  <mat-card-header>
+    <mat-card-title>{{newsItem.title}}</mat-card-title>
+  </mat-card-header>
+<img mat-card-image src="{{newsItem.urlToImage}}" class="thumbnail">
+
+<mat-card-content>
+  <p>{{newsItem.description}}</p>
+  <br />
+  <p>{{newsItem.content}}</p>
+</mat-card-content>
+<mat-card-actions>
+  <a mat-button href="{{newsItem.url}}" target="_blank">Read more!</a>
+  <button mat-button>SHARE</button>
+</mat-card-actions>
+
+</ng-container>
+
+<ng-template #noContent>
+  <mat-progress-spinner color="accent" mode="indeterminate"></mat-progress-spinner>
+  Loading...
+</ng-template>

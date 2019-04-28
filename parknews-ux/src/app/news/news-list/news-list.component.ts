@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { NewsApiService } from '../shared/apis/news-api.service';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { NewsApiService } from '../../shared/apis/news-api.service';
 import { HttpErrorResponse } from '@angular/common/http';
-import { News } from '../shared/models/news';
+import { News } from '../../shared/models/news';
 
 @Component({
   selector: 'park-news-list',
@@ -15,11 +15,16 @@ export class NewsListComponent implements OnInit {
   newsList: News[];
   news$;
 
+  @Output() newsSelected = new EventEmitter<News>();
+
   ngOnInit() {
 
     this.newsApi.getNews().subscribe(
       news => {
         this.newsList = news['articles'];
+        this.newsList.forEach((item, i) => {
+          item.id = i + 1;
+        })
         console.log(news);
         console.log(this.newsList);
       },
@@ -30,6 +35,11 @@ export class NewsListComponent implements OnInit {
         console.log(err.status);
       }
     );
+  }
+
+  readMore(newsItem: News) {
+    console.log(newsItem);
+    this.newsSelected.emit(newsItem);
   }
 
 }
