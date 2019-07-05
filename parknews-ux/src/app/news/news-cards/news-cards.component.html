@@ -24,7 +24,12 @@
 <div class="news-card-container">
   <div class="news-grid">
   <mat-card class="news" *ngFor="let news of newsList">
-    <mat-card-title>{{news.title}}</mat-card-title>
+    <mat-card-subtitle>{{news.title}}</mat-card-subtitle>
+    <mat-card-content>{{news.content}}</mat-card-content>
+    <mat-card-actions>
+        <a mat-button href="{{news.url}}" target="_blank">Read more!</a>
+        <button mat-button>SHARE</button>
+      </mat-card-actions>
   </mat-card> 
   </div>
   </div>
