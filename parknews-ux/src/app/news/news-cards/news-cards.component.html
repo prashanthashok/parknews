@@ -23,16 +23,21 @@
 
 <div class="news-card-container">
   <div class="news-grid">
-  <mat-card class="news" *ngFor="let news of newsList">
-    <mat-card-subtitle>{{news.title}}</mat-card-subtitle>
-    <mat-card-content>{{news.content}}</mat-card-content>
-    <mat-card-actions>
+    <mat-card class="news" *ngFor="let news of newsList">
+      <mat-card-header>
+        <a href="{{news.url}}">
+        <mat-card-subtitle>{{news.title}}</mat-card-subtitle>
+      </a>
+      </mat-card-header>
+      <img class="thumbnail flex" src="{{news.urlToImage}}" alt="">
+      <mat-card-content class="flex">{{news.content}}</mat-card-content>
+
+      <!-- <mat-card-actions>
         <a mat-button href="{{news.url}}" target="_blank">Read more!</a>
-        <button mat-button>SHARE</button>
-      </mat-card-actions>
-  </mat-card> 
+      </mat-card-actions> -->
+    </mat-card>
   </div>
-  </div>
+</div>
 
 
 <!-- <div class="news-card-container">

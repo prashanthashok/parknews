@@ -38,3 +38,12 @@
     width:900px;
     /* background-color: yellowgreen; */
   }
+
+  .thumbnail {
+    height: 50px;
+    width: 50px;
+}
+
+.flex{
+    display: flex;
+}
