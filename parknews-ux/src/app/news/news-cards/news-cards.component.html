@@ -1,4 +1,4 @@
-<div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">
+<!-- <div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">
   <div fxFlex="20%">
     <img mat-card-image class="img" src="https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/8V46UZCS0V.jpg">
   </div>
@@ -11,12 +11,27 @@
   <div fxFlex="20%">
     <img mat-card-image class="img" src="https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/U9PP3KXXY2.jpg">
   </div>
-</div>
+</div> -->
 
-<div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">
-  <div fxFlex="20%" *ngFor="let news of newsList">
-    <mat-card >
+<!-- <div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center"> -->
+<!-- <div fxFlex="20%"> -->
+<!-- <mat-card *ngFor="let news of newsList">
       <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">{{news.title}}</mat-card-title>
-    </mat-card>
+    </mat-card> -->
+<!-- </div> -->
+<!-- </div> -->
+
+<div class="news-card-container">
+  <div class="news-grid">
+  <mat-card class="news" *ngFor="let news of newsList">
+    <mat-card-title>{{news.title}}</mat-card-title>
+  </mat-card> 
   </div>
-</div>
+  </div>
+
+
+<!-- <div class="news-card-container">
+<mat-card *ngFor="let news of newsList">
+  <mat-card-title>{{news.title}}</mat-card-title>
+</mat-card>
+</div> -->
