@@ -9,7 +9,8 @@ import { HeaderComponent } from './header/header.component';
 import { NewsListComponent } from './news/news-list/news-list.component';
 import { NewsContainerComponent } from './news/news-container.component';
 import { NewsDetailComponent } from './news/news-detail/news-detail.component';
-import { FlexLayoutModule } from '@angular/flex-layout'
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { NewsCardsComponent } from './news/news-cards/news-cards.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,9 @@ import { FlexLayoutModule } from '@angular/flex-layout'
     HeaderComponent,
     NewsListComponent,
     NewsContainerComponent,
-    NewsDetailComponent
+    NewsDetailComponent,
+    NewsCardsComponent
+    
   ],
   imports: [
     BrowserModule,

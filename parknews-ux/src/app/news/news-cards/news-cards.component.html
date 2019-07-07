@@ -1,0 +1,50 @@
+<!-- <div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">
+  <div fxFlex="20%">
+    <img mat-card-image class="img" src="https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/8V46UZCS0V.jpg">
+  </div>
+  <div fxFlex="20%">
+    <img mat-card-image class="img" src="https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/LTLE4QGRVQ.jpg">
+  </div>
+  <div fxFlex="20%">
+    <img mat-card-image class="img" src="https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/R926LU1YEA.jpg">
+  </div>
+  <div fxFlex="20%">
+    <img mat-card-image class="img" src="https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/U9PP3KXXY2.jpg">
+  </div>
+</div> -->
+
+<!-- <div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center"> -->
+<!-- <div fxFlex="20%"> -->
+<!-- <mat-card *ngFor="let news of newsList">
+      <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">{{news.title}}</mat-card-title>
+    </mat-card> -->
+<!-- </div> -->
+<!-- </div> -->
+
+<div class="news-card-container">
+  <div class="news-grid">
+    <mat-card class="news" *ngFor="let news of newsList">
+      <mat-card-header>
+        <a href="{{news.url}}">
+        <mat-card-subtitle>{{news.title}}</mat-card-subtitle>
+      </a>
+      </mat-card-header>
+      <!-- <img class="thumbnail flex" src="{{news.urlToImage}}" alt="">
+      <mat-card-content class="flex">{{news.content}}</mat-card-content> -->
+      <mat-card-content class="flex">
+        <img class="thumbnail" src="{{news.urlToImage}}" alt="">
+      </mat-card-content>
+
+      <!-- <mat-card-actions>
+        <a mat-button href="{{news.url}}" target="_blank">Read more!</a>
+      </mat-card-actions> -->
+    </mat-card>
+  </div>
+</div>
+
+
+<!-- <div class="news-card-container">
+<mat-card *ngFor="let news of newsList">
+  <mat-card-title>{{news.title}}</mat-card-title>
+</mat-card>
+</div> -->
