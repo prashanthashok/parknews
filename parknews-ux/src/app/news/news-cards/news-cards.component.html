@@ -29,8 +29,11 @@
         <mat-card-subtitle>{{news.title}}</mat-card-subtitle>
       </a>
       </mat-card-header>
-      <img class="thumbnail flex" src="{{news.urlToImage}}" alt="">
-      <mat-card-content class="flex">{{news.content}}</mat-card-content>
+      <!-- <img class="thumbnail flex" src="{{news.urlToImage}}" alt="">
+      <mat-card-content class="flex">{{news.content}}</mat-card-content> -->
+      <mat-card-content class="flex">
+        <img class="thumbnail" src="{{news.urlToImage}}" alt="">
+      </mat-card-content>
 
       <!-- <mat-card-actions>
         <a mat-button href="{{news.url}}" target="_blank">Read more!</a>
